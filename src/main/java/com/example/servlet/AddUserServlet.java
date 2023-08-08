@@ -33,7 +33,9 @@ public class AddUserServlet extends HttpServlet {
         Warehouse.getInstance().addUser(user);
 
         request.setAttribute("user", user);
-        response.sendRedirect(request.getContextPath() + "/add");
+//        response.sendRedirect(request.getContextPath() + "/add");
 
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/jsp/add.jsp");
+        requestDispatcher.forward(request, response);
     }
 }
