@@ -19,7 +19,7 @@ public class AddUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Forward the request to the /add.jsp page to display the form
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/jsp/users.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/jsp/add.jsp");
         requestDispatcher.forward(request, response);
     }
 
